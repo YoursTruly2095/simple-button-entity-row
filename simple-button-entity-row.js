@@ -61,10 +61,16 @@ class SimpleButtonEntityRow extends Polymer.Element {
         this.name = '';
     }
 
-    if ('button_text' in config) {
-        this.buttonText = config.button_text;
+    if ('button_text1' in config) {
+        this.buttonText1 = config.button_text1;
     } else {
-        this.buttonText = 'Action';
+        this.buttonText1 = 'Action';
+    }
+
+    if ('button_text2' in config) {
+        this.buttonText2 = config.button_text2;
+    } else {
+        this.buttonText2 = 'Cancel';
     }
   }
 
@@ -72,9 +78,14 @@ class SimpleButtonEntityRow extends Polymer.Element {
     this._hass = hass;
   }
 
-  clickHandler(e) {
+  clickHandler1(e) {
     const service = this._config.tap_action.service.split(".")
     this._hass.callService(service[0], service[1], this._config.tap_action.service_data);
+  }
+
+  clickHandler2(e) {
+    const service = this._config.hold_action.service.split(".")
+    this._hass.callService(service[0], service[1], this._config.hold_action.service_data);
   }
 
 }
