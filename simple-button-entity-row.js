@@ -35,7 +35,11 @@ class SimpleButtonEntityRow extends Polymer.Element {
         </td>
 
         <td class="simple-button-entity-row-td">
-            <input type="button" style="cursor: pointer;" value="[[buttonText]]" on-click='clickHandler'/>
+            <input type="button" style="cursor: pointer;" value="[[buttonText1]]" on-click='clickHandler1'/>
+        </td>
+
+        <td class="simple-button-entity-row-td">
+            <input type="button" style="cursor: pointer;" value="[[buttonText2]]" on-click='clickHandler2'/>
         </td>
         </tr>
         </table>
