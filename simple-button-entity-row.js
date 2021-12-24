@@ -65,7 +65,7 @@ class SimpleButtonEntityRow extends Polymer.Element {
     }
 
     if ('button_text2' in config) {
-        this.buttonText2 = config.button_text;
+        this.buttonText2 = config.button_text2;
     } else {
         this.buttonText2 = 'Cancel';
     }
